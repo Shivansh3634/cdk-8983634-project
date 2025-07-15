@@ -1,0 +1,186 @@
+{
+  "version": "44.0.0",
+  "artifacts": {
+    "Cdk8983634ProjectStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Cdk8983634ProjectStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Cdk8983634ProjectStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Cdk8983634ProjectStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/57e5306ffd163606cfdc113e89ff04d3af81fad46341c66a3fbc2963f5d53d86.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Cdk8983634ProjectStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Cdk8983634ProjectStack.assets"
+      ],
+      "metadata": {
+        "/Cdk8983634ProjectStack/ShivanshS3Bucket8983634": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "versioned": true,
+              "removalPolicy": "destroy"
+            }
+          }
+        ],
+        "/Cdk8983634ProjectStack/ShivanshS3Bucket8983634/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShivanshS3Bucket898363489BE2BEF"
+          }
+        ],
+        "/Cdk8983634ProjectStack/ShivanshLambda8983634": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "runtime": "*",
+              "handler": "*",
+              "code": "*",
+              "environment": "*"
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addEnvironment": [
+                "*",
+                "*"
+              ]
+            }
+          }
+        ],
+        "/Cdk8983634ProjectStack/ShivanshLambda8983634/ServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "assumedBy": {
+                "principalAccount": "*",
+                "assumeRoleAction": "*"
+              },
+              "managedPolicies": [
+                {
+                  "managedPolicyArn": "*"
+                }
+              ]
+            }
+          }
+        ],
+        "/Cdk8983634ProjectStack/ShivanshLambda8983634/ServiceRole/ImportServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/Cdk8983634ProjectStack/ShivanshLambda8983634/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShivanshLambda8983634ServiceRoleC044A761"
+          }
+        ],
+        "/Cdk8983634ProjectStack/ShivanshLambda8983634/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShivanshLambda8983634B5208144"
+          }
+        ],
+        "/Cdk8983634ProjectStack/ShivanshLambda8983634/LogGroup": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "logGroupName": "*"
+            }
+          }
+        ],
+        "/Cdk8983634ProjectStack/ShivanshLambda8983634/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShivanshLambda8983634LogGroup7D61A778"
+          }
+        ],
+        "/Cdk8983634ProjectStack/ShivanshDynamoTable8983634": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "partitionKey": {
+                "name": "*",
+                "type": "S"
+              },
+              "tableName": "*",
+              "removalPolicy": "destroy"
+            }
+          },
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "ShivanshDynamoTable8983634C6BF8E70"
+            }
+          }
+        ],
+        "/Cdk8983634ProjectStack/ShivanshDynamoTable8983634/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShivanshDynamoTable8983634C6BF8E70"
+          }
+        ],
+        "/Cdk8983634ProjectStack/ShivanshDynamoTable8983634/ScalingRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/Cdk8983634ProjectStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Cdk8983634ProjectStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/Cdk8983634ProjectStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Cdk8983634ProjectStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Cdk8983634ProjectStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  },
+  "minimumCliVersion": "2.1020.0"
+}
